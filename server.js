@@ -2,7 +2,7 @@
 var express = require('express');
 var url = require("url");
 require("dotenv").config();
-
+const PORT = process.env.PORT || 4000;
 //Status codes defined in external file
 require('./http_status.js');
 
@@ -34,7 +34,7 @@ app.get('/phone/*', handleGetRequest);//SubFolders
 app.get('/search/*', handleGetRequest);//SubFolders
 
 //Start the app listening on port 8080
-app.listen(8080);
+app.listen(PORT);
 
 
 /* Handles GET requests sent to web service.
