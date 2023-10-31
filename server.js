@@ -34,7 +34,7 @@ app.get('/phone/*', handleGetRequest);//SubFolders
 app.get('/search/*', handleGetRequest);//SubFolders
 
 //Start the app listening on port 8080
-app.listen(8081);
+app.listen(8080);
 
 
 /* Handles GET requests sent to web service.
