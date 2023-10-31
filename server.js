@@ -37,7 +37,6 @@ app.get('/search/*', handleGetRequest);//SubFolders
 app.listen(PORT);
 
 
-
 /* Handles GET requests sent to web service.
    Processes path and query string and calls appropriate functions to
    return the data. */
