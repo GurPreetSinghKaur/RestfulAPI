@@ -19,7 +19,7 @@ var connectionPool = mysql.createPool({
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_ROOT_PASSWORD,
     database: process.env.MYSQL_USER,
-    debug: false
+    debug: true
 });
 
 app.use(function(req, res, next) {
