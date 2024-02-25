@@ -10,7 +10,7 @@ require('./http_status.js');
 var app = express();
 
 //Import the mysql module
-var mysql = require('mysql');
+var mysql = require('mysql2');
 
 //Create a connection object with the user details
 var connectionPool = mysql.createConnection(process.env.MYSQLHOSTURL);
