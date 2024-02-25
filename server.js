@@ -13,14 +13,8 @@ var app = express();
 var mysql = require('mysql');
 
 //Create a connection object with the user details
-var connectionPool = mysql.createPool({
-    connectionLimit: 1,
-    host: process.env.MYSQLHOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_ROOT_PASSWORD,
-    database: process.env.MYSQL_USER,
-    debug: true
-});
+var connectionPool = mysql.createConnection(process.env.MYSQLHOSTURL);
+
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
